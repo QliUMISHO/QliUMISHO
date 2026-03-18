@@ -14,3 +14,7 @@
 <p align="center">
   <img src="./character-card.svg?v=9" alt="Pokemon Skills" />
 </p>
+
+<p align="center">
+  <img src="./servant-parameters.svg" alt="Servant Parameters" width="724">
+</p>
