@@ -1,0 +1,82 @@
+name: Update HP Bar Every Birthday
+
+on:
+  schedule:
+    - cron: "5 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-hp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Generate hp-bar.svg
+        run: |
+          python << 'PY'
+          from datetime import datetime, timedelta, timezone
+          from pathlib import Path
+
+          # Base settings
+          username = "Raymond A. Auditor"
+          base_hp = 25
+          start_year = 2025
+          birthday_month = 3
+          birthday_day = 27
+
+          # Philippines time (UTC+8)
+          now_utc = datetime.now(timezone.utc)
+          now_ph = now_utc + timedelta(hours=8)
+          today = now_ph.date()
+
+          # Count how many birthdays have passed since start_year
+          increments = 0
+          for year in range(start_year, today.year + 1):
+              birthday = datetime(year, birthday_month, birthday_day).date()
+              if today >= birthday:
+                  increments += 1
+
+          hp = min(base_hp + increments, 100)
+          bar_width = 500
+          hp_width = int(bar_width * hp / 100)
+
+          svg = f'''<svg width="600" height="90" xmlns="http://www.w3.org/2000/svg">
+            <style>
+              .name {{
+                font: 24px Verdana, sans-serif;
+                fill: #58a6ff;
+              }}
+              .hp-text {{
+                font: bold 15px Verdana, sans-serif;
+                fill: white;
+              }}
+            </style>
+
+            <text x="300" y="22" text-anchor="middle" class="name">{username}</text>
+
+            <rect x="50" y="40" rx="12" ry="12" width="500" height="28"
+                  fill="#1f2937" stroke="#58a6ff" stroke-width="2"/>
+
+            <rect x="50" y="40" rx="12" ry="12" width="{hp_width}" height="28"
+                  fill="#dc2626"/>
+
+            <text x="300" y="59" text-anchor="middle" class="hp-text">HP {hp} / 100</text>
+          </svg>'''
+
+          Path("hp-bar.svg").write_text(svg, encoding="utf-8")
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hp-bar.svg
+          git diff --cached --quiet || git commit -m "Update HP bar for birthday"
+
+      - name: Push changes
+        run: git push
