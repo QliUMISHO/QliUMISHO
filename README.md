@@ -22,8 +22,8 @@
 ## WORLDLINE STATUS 
 
 <p align="center">
-  <img src="./worldline-divergence.svg" alt="Worldline Divergence" width="724"><br>
-  <img src="./worldline-news.svg" alt="Worldline News" width="724">
+  <img src="./worldline-divergence.svg?v=3" alt="Worldline Divergence" width="724"><br>
+  <img src="./worldline-news.svg?v=3" alt="Worldline News" width="724">
 </p>
 
 ## LORE
