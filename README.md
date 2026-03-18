@@ -8,5 +8,5 @@
 ## CHARACTER PROFILE
 
 <p align="center">
-  <img src="./hp-bar.svg?v=10" alt="HP Bar"/>
+  <img src="./hp-bar.svg?v=12" alt="HP Bar"/>
 </p>
