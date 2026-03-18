@@ -7,3 +7,6 @@
 
 ## About ME
 
+<p align="Center">
+  <img src="./hp-bar.svg" alt="HP Bar" />
+</p>
