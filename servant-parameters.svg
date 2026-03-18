@@ -1,98 +1,133 @@
-<svg width="724" height="156" viewBox="0 0 724 156" xmlns="http://www.w3.org/2000/svg">
+<svg width="724" height="196" viewBox="0 0 724 196" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .pixel {
-        font-family: "Lucida Console", monospace;
+        font-family: "Lucida Console", "Courier New", monospace;
         letter-spacing: 0.5px;
         shape-rendering: crispEdges;
+        text-rendering: geometricPrecision;
+      }
+      .frame {
+        fill: #161b22;
+        stroke: #30363d;
+        stroke-width: 1.5;
+      }
+      .panel {
+        fill: #0d1117;
+        stroke: #30363d;
+        stroke-width: 1.2;
       }
       .label {
         font-size: 18px;
         font-weight: bold;
-        fill: #2f2f2f;
+        fill: #c9d1d9;
       }
       .value {
         font-size: 18px;
         font-weight: bold;
-        fill: #1f1f1f;
+        fill: #c9d1d9;
       }
       .track {
-        fill: #2f3440;
+        fill: #21262d;
+        stroke: #30363d;
+        stroke-width: 1;
       }
-      .seg {
-        fill: #ff7a00;
+      .seg-on {
+        fill: #ff8f1f;
       }
-      .seg-dark {
-        fill: #cc5f00;
+      .seg-off {
+        fill: #30363d;
+      }
+      .gap {
+        fill: #0d1117;
       }
     </style>
   </defs>
 
-  <!-- box -->
-  <rect x="0" y="0" width="724" height="156" fill="#e8e8d0" stroke="#2b2b2b" stroke-width="2"/>
+  <!-- outer frame -->
+  <rect x="1" y="1" width="722" height="194" rx="10" class="frame"/>
 
-  <!-- ================= ROW 1 ================= -->
-  <text x="22" y="28" class="pixel label">STRENGTH</text>
-  <text x="242" y="28" text-anchor="end" class="pixel value">EX--</text>
+  <!-- inner panels -->
+  <rect x="16" y="18" width="330" height="160" rx="8" class="panel"/>
+  <rect x="378" y="18" width="330" height="160" rx="8" class="panel"/>
 
-  <!-- segmented bar left -->
-  <rect x="22" y="34" width="220" height="10" class="track"/>
-  <rect x="22" y="34" width="42" height="10" class="seg"/>
-  <rect x="67" y="34" width="42" height="10" class="seg"/>
-  <rect x="112" y="34" width="42" height="10" class="seg"/>
-  <rect x="157" y="34" width="42" height="10" class="track"/>
-  <rect x="202" y="34" width="40" height="10" class="track"/>
+  <!-- left panel -->
+  <text x="42" y="46" class="pixel label">STRENGTH</text>
+  <text x="312" y="46" text-anchor="end" class="pixel value">EX--</text>
+  <rect x="42" y="58" width="186" height="10" class="track"/>
+  <rect x="42"  y="58" width="32" height="10" class="seg-on"/>
+  <rect x="79"  y="58" width="32" height="10" class="seg-on"/>
+  <rect x="116" y="58" width="32" height="10" class="seg-on"/>
+  <rect x="153" y="58" width="32" height="10" class="seg-off"/>
+  <rect x="190" y="58" width="32" height="10" class="seg-off"/>
+  <rect x="74" y="58" width="5" height="10" class="gap"/>
+  <rect x="111" y="58" width="5" height="10" class="gap"/>
+  <rect x="148" y="58" width="5" height="10" class="gap"/>
+  <rect x="185" y="58" width="5" height="10" class="gap"/>
 
-  <text x="362" y="28" class="pixel label">ENDURANCE</text>
-  <text x="632" y="28" text-anchor="end" class="pixel value">EX--</text>
+  <text x="42" y="96" class="pixel label">AGILITY</text>
+  <text x="312" y="96" text-anchor="end" class="pixel value">EX--</text>
+  <rect x="42" y="108" width="186" height="10" class="track"/>
+  <rect x="42"  y="108" width="32" height="10" class="seg-on"/>
+  <rect x="79"  y="108" width="32" height="10" class="seg-on"/>
+  <rect x="116" y="108" width="32" height="10" class="seg-on"/>
+  <rect x="153" y="108" width="32" height="10" class="seg-off"/>
+  <rect x="190" y="108" width="32" height="10" class="seg-off"/>
+  <rect x="74" y="108" width="5" height="10" class="gap"/>
+  <rect x="111" y="108" width="5" height="10" class="gap"/>
+  <rect x="148" y="108" width="5" height="10" class="gap"/>
+  <rect x="185" y="108" width="5" height="10" class="gap"/>
 
-  <!-- segmented bar right -->
-  <rect x="362" y="34" width="270" height="10" class="track"/>
-  <rect x="362" y="34" width="50" height="10" class="seg"/>
-  <rect x="416" y="34" width="50" height="10" class="seg"/>
-  <rect x="470" y="34" width="50" height="10" class="seg"/>
-  <rect x="524" y="34" width="50" height="10" class="track"/>
-  <rect x="578" y="34" width="54" height="10" class="track"/>
+  <text x="42" y="146" class="pixel label">LUCK</text>
+  <text x="312" y="146" text-anchor="end" class="pixel value">EX-</text>
+  <rect x="42" y="158" width="186" height="10" class="track"/>
+  <rect x="42"  y="158" width="32" height="10" class="seg-on"/>
+  <rect x="79"  y="158" width="32" height="10" class="seg-on"/>
+  <rect x="116" y="158" width="32" height="10" class="seg-on"/>
+  <rect x="153" y="158" width="32" height="10" class="seg-on"/>
+  <rect x="190" y="158" width="32" height="10" class="seg-off"/>
+  <rect x="74" y="158" width="5" height="10" class="gap"/>
+  <rect x="111" y="158" width="5" height="10" class="gap"/>
+  <rect x="148" y="158" width="5" height="10" class="gap"/>
+  <rect x="185" y="158" width="5" height="10" class="gap"/>
 
-  <!-- ================= ROW 2 ================= -->
-  <text x="22" y="72" class="pixel label">AGILITY</text>
-  <text x="242" y="72" text-anchor="end" class="pixel value">EX--</text>
+  <!-- right panel -->
+  <text x="404" y="46" class="pixel label">ENDURANCE</text>
+  <text x="674" y="46" text-anchor="end" class="pixel value">EX--</text>
+  <rect x="404" y="58" width="186" height="10" class="track"/>
+  <rect x="404" y="58" width="32" height="10" class="seg-on"/>
+  <rect x="441" y="58" width="32" height="10" class="seg-on"/>
+  <rect x="478" y="58" width="32" height="10" class="seg-on"/>
+  <rect x="515" y="58" width="32" height="10" class="seg-off"/>
+  <rect x="552" y="58" width="32" height="10" class="seg-off"/>
+  <rect x="436" y="58" width="5" height="10" class="gap"/>
+  <rect x="473" y="58" width="5" height="10" class="gap"/>
+  <rect x="510" y="58" width="5" height="10" class="gap"/>
+  <rect x="547" y="58" width="5" height="10" class="gap"/>
 
-  <rect x="22" y="78" width="220" height="10" class="track"/>
-  <rect x="22" y="78" width="42" height="10" class="seg"/>
-  <rect x="67" y="78" width="42" height="10" class="seg"/>
-  <rect x="112" y="78" width="42" height="10" class="seg"/>
-  <rect x="157" y="78" width="42" height="10" class="track"/>
-  <rect x="202" y="78" width="40" height="10" class="track"/>
+  <text x="404" y="96" class="pixel label">MANA</text>
+  <text x="674" y="96" text-anchor="end" class="pixel value">EX---</text>
+  <rect x="404" y="108" width="186" height="10" class="track"/>
+  <rect x="404" y="108" width="32" height="10" class="seg-on"/>
+  <rect x="441" y="108" width="32" height="10" class="seg-on"/>
+  <rect x="478" y="108" width="32" height="10" class="seg-off"/>
+  <rect x="515" y="108" width="32" height="10" class="seg-off"/>
+  <rect x="552" y="108" width="32" height="10" class="seg-off"/>
+  <rect x="436" y="108" width="5" height="10" class="gap"/>
+  <rect x="473" y="108" width="5" height="10" class="gap"/>
+  <rect x="510" y="108" width="5" height="10" class="gap"/>
+  <rect x="547" y="108" width="5" height="10" class="gap"/>
 
-  <text x="362" y="72" class="pixel label">MANA</text>
-  <text x="632" y="72" text-anchor="end" class="pixel value">EX---</text>
-
-  <rect x="362" y="78" width="270" height="10" class="track"/>
-  <rect x="362" y="78" width="50" height="10" class="seg"/>
-  <rect x="416" y="78" width="50" height="10" class="seg"/>
-  <rect x="470" y="78" width="50" height="10" class="track"/>
-  <rect x="524" y="78" width="50" height="10" class="track"/>
-  <rect x="578" y="78" width="54" height="10" class="track"/>
-
-  <!-- ================= ROW 3 ================= -->
-  <text x="22" y="116" class="pixel label">LUCK</text>
-  <text x="242" y="116" text-anchor="end" class="pixel value">EX-</text>
-
-  <rect x="22" y="122" width="220" height="10" class="track"/>
-  <rect x="22" y="122" width="42" height="10" class="seg"/>
-  <rect x="67" y="122" width="42" height="10" class="seg"/>
-  <rect x="112" y="122" width="42" height="10" class="seg"/>
-  <rect x="157" y="122" width="42" height="10" class="seg"/>
-  <rect x="202" y="122" width="40" height="10" class="track"/>
-
-  <text x="362" y="116" class="pixel label">NP</text>
-  <text x="632" y="116" text-anchor="end" class="pixel value">EX--</text>
-
-  <rect x="362" y="122" width="270" height="10" class="track"/>
-  <rect x="362" y="122" width="50" height="10" class="seg"/>
-  <rect x="416" y="122" width="50" height="10" class="seg"/>
-  <rect x="470" y="122" width="50" height="10" class="seg"/>
-  <rect x="524" y="122" width="50" height="10" class="track"/>
-  <rect x="578" y="122" width="54" height="10" class="track"/>
+  <text x="404" y="146" class="pixel label">NP</text>
+  <text x="674" y="146" text-anchor="end" class="pixel value">EX--</text>
+  <rect x="404" y="158" width="186" height="10" class="track"/>
+  <rect x="404" y="158" width="32" height="10" class="seg-on"/>
+  <rect x="441" y="158" width="32" height="10" class="seg-on"/>
+  <rect x="478" y="158" width="32" height="10" class="seg-on"/>
+  <rect x="515" y="158" width="32" height="10" class="seg-off"/>
+  <rect x="552" y="158" width="32" height="10" class="seg-off"/>
+  <rect x="436" y="158" width="5" height="10" class="gap"/>
+  <rect x="473" y="158" width="5" height="10" class="gap"/>
+  <rect x="510" y="158" width="5" height="10" class="gap"/>
+  <rect x="547" y="158" width="5" height="10" class="gap"/>
 </svg>
