@@ -7,6 +7,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+
 API_BASE = "http://divergence.nyarchlinux.moe/api"
 ROOT = Path(__file__).resolve().parents[1]
 DIVERGENCE_SVG = ROOT / "worldline-divergence.svg"
@@ -19,26 +20,38 @@ def fetch_json(path: str, params: dict | None = None) -> dict:
     if params:
         url += "?" + urllib.parse.urlencode(params)
 
-    req = urllib.request.Request(
+    request = urllib.request.Request(
         url,
         headers={
-            "User-Agent": "github-profile-worldline-updater/1.0",
+            "User-Agent": "worldline-profile-updater/1.0",
             "Accept": "application/json",
         },
     )
 
-    with urllib.request.urlopen(req, timeout=20) as response:
-        body = response.read().decode("utf-8")
-        return json.loads(body)
+    with urllib.request.urlopen(request, timeout=20) as response:
+        return json.loads(response.read().decode("utf-8"))
 
 
-def esc(text: object) -> str:
-    return html.escape(str(text), quote=True)
+def esc(value: object) -> str:
+    return html.escape(str(value), quote=True)
+
+
+def compact(text: str) -> str:
+    return " ".join(text.split())
 
 
 def truncate(text: str, limit: int) -> str:
-    clean = " ".join(text.split())
-    return clean if len(clean) <= limit else clean[: limit - 1] + "…"
+    text = compact(text)
+    if len(text) <= limit:
+        return text
+    return text[: limit - 1] + "…"
+
+
+def fmt_divergence(value: object) -> str:
+    try:
+        return f"{float(value):.6f}"
+    except (TypeError, ValueError):
+        return "-"
 
 
 def fmt_impact(value: object) -> str:
@@ -48,15 +61,8 @@ def fmt_impact(value: object) -> str:
         return "-"
 
 
-def fmt_divergence(value: object) -> str:
-    try:
-        return f"{float(value):.6f}"
-    except (TypeError, ValueError):
-        return str(value)
-
-
 def render_divergence_svg(divergence_value: str, updated_at: str) -> str:
-    return f"""<svg width="724" height="148" viewBox="0 0 724 148" xmlns="http://www.w3.org/2000/svg">
+    return f"""<svg width="724" height="156" viewBox="0 0 724 156" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .pixel {{
@@ -86,7 +92,7 @@ def render_divergence_svg(divergence_value: str, updated_at: str) -> str:
         fill: #8b949e;
       }}
       .value {{
-        font-size: 34px;
+        font-size: 36px;
         font-weight: bold;
         fill: #58a6ff;
       }}
@@ -106,30 +112,30 @@ def render_divergence_svg(divergence_value: str, updated_at: str) -> str:
     </style>
   </defs>
 
-  <rect x="1" y="1" width="722" height="146" rx="10" class="frame"/>
-  <rect x="16" y="16" width="692" height="116" rx="8" class="panel"/>
+  <rect x="1" y="1" width="722" height="154" rx="10" class="frame"/>
+  <rect x="16" y="16" width="692" height="124" rx="8" class="panel"/>
 
   <text x="32" y="40" class="pixel title">WORLDLINE DIVERGENCE</text>
-  <rect x="32" y="50" width="660" height="3" rx="1.5" class="accent"/>
+  <rect x="32" y="48" width="660" height="3" rx="1.5" class="accent"/>
 
-  <text x="32" y="74" class="pixel muted">CURRENT VALUE</text>
-  <text x="32" y="114" class="pixel value">{esc(divergence_value)}</text>
+  <text x="32" y="76" class="pixel muted">CURRENT VALUE</text>
+  <text x="32" y="118" class="pixel value">{esc(divergence_value)}</text>
 
-  <rect x="544" y="76" width="148" height="24" rx="6" class="chip"/>
-  <text x="618" y="92" text-anchor="middle" class="pixel chip-text">STEINS;GATE</text>
+  <rect x="534" y="70" width="158" height="28" rx="6" class="chip"/>
+  <text x="613" y="88" text-anchor="middle" class="pixel chip-text">STEINS;GATE</text>
 
-  <text x="32" y="126" class="pixel muted">LAST UPDATE {esc(updated_at)}</text>
+  <text x="32" y="132" class="pixel muted">LAST UPDATE {esc(updated_at)}</text>
 </svg>
 """
 
 
 def render_news_svg(articles: list[dict], updated_at: str) -> str:
     rows = []
-    row_y = [44, 92, 140]
+    row_y = [48, 102, 156]
 
-    padded_articles = articles[:NEWS_COUNT]
-    while len(padded_articles) < NEWS_COUNT:
-        padded_articles.append(
+    padded = articles[:NEWS_COUNT]
+    while len(padded) < NEWS_COUNT:
+        padded.append(
             {
                 "title": "No article available",
                 "field": "-",
@@ -138,23 +144,22 @@ def render_news_svg(articles: list[dict], updated_at: str) -> str:
             }
         )
 
-    for index, article in enumerate(padded_articles):
-        y = row_y[index]
-        title = truncate(str(article.get("title", "Untitled")), 52)
+    for idx, article in enumerate(padded, start=1):
+        y = row_y[idx - 1]
+        title = truncate(str(article.get("title", "Untitled")), 54)
         field = truncate(str(article.get("field", "-")), 12)
         impact = fmt_impact(article.get("impact"))
-        divergence = fmt_divergence(article.get("divergence", "-"))
+        divergence = fmt_divergence(article.get("divergence"))
 
         rows.append(
             f"""
-  <rect x="24" y="{y}" width="676" height="38" rx="6" class="row"/>
+  <rect x="24" y="{y}" width="676" height="40" rx="6" class="row"/>
   <text x="40" y="{y + 15}" class="pixel item-title">{esc(title)}</text>
-  <text x="40" y="{y + 30}" class="pixel item-meta">FIELD {esc(field)}  |  IMPACT {esc(impact)}  |  DIV {esc(divergence)}</text>
-  <text x="682" y="{y + 15}" text-anchor="end" class="pixel index">{index + 1:02d}</text>
-"""
+  <text x="40" y="{y + 31}" class="pixel item-meta">FIELD {esc(field)}  |  IMPACT {esc(impact)}  |  DIV {esc(divergence)}</text>
+  <text x="682" y="{y + 16}" text-anchor="end" class="pixel index">{idx:02d}</text>"""
         )
 
-    return f"""<svg width="724" height="196" viewBox="0 0 724 196" xmlns="http://www.w3.org/2000/svg">
+    return f"""<svg width="724" height="224" viewBox="0 0 724 224" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .pixel {{
@@ -209,13 +214,13 @@ def render_news_svg(articles: list[dict], updated_at: str) -> str:
     </style>
   </defs>
 
-  <rect x="1" y="1" width="722" height="194" rx="10" class="frame"/>
-  <rect x="16" y="16" width="692" height="164" rx="8" class="panel"/>
+  <rect x="1" y="1" width="722" height="222" rx="10" class="frame"/>
+  <rect x="16" y="16" width="692" height="192" rx="8" class="panel"/>
 
   <text x="32" y="34" class="pixel title">LATEST WORLDLINE NEWS</text>
-  <rect x="32" y="40" width="660" height="3" rx="1.5" class="accent"/>
-  {''.join(rows)}
-  <text x="32" y="170" class="pixel foot">LAST UPDATE {esc(updated_at)}</text>
+  <rect x="32" y="40" width="660" height="3" rx="1.5" class="accent"/>{''.join(rows)}
+
+  <text x="32" y="196" class="pixel foot">LAST UPDATE {esc(updated_at)}</text>
 </svg>
 """
 
@@ -223,11 +228,11 @@ def render_news_svg(articles: list[dict], updated_at: str) -> str:
 def main() -> None:
     now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
-    divergence_data = fetch_json("/divergence")
-    news_data = fetch_json("/news", {"page": 1, "per_page": NEWS_COUNT})
+    divergence_payload = fetch_json("/divergence")
+    news_payload = fetch_json("/news", {"page": 1, "per_page": NEWS_COUNT})
 
-    divergence_value = fmt_divergence(divergence_data.get("divergence", "-"))
-    articles = news_data.get("articles", [])
+    divergence_value = fmt_divergence(divergence_payload.get("divergence"))
+    articles = news_payload.get("articles", [])
 
     DIVERGENCE_SVG.write_text(
         render_divergence_svg(divergence_value, now_utc),
@@ -238,7 +243,7 @@ def main() -> None:
         encoding="utf-8",
     )
 
-    print("Updated:", DIVERGENCE_SVG.name, NEWS_SVG.name)
+    print(f"Updated {DIVERGENCE_SVG.name} and {NEWS_SVG.name}")
 
 
 if __name__ == "__main__":
