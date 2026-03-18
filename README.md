@@ -5,3 +5,8 @@
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=QliUMISHO&layout=compact&theme=tokyonight" />
 </p>
 
+## About ME
+
+<p align="Center">
+  <img src="./hp-bar.svg" alt="HP Bar" />
+</p>
