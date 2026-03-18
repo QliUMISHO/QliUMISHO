@@ -1,62 +1,79 @@
-<svg width="724" height="156" viewBox="0 0 724 156" xmlns="http://www.w3.org/2000/svg">
+<svg width="724" height="196" viewBox="0 0 724 196" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .pixel {
-        font-family: "Lucida Console", monospace;
+        font-family: "Lucida Console", "Courier New", monospace;
         letter-spacing: 0.5px;
         shape-rendering: crispEdges;
+        text-rendering: geometricPrecision;
+      }
+      .frame {
+        fill: #161b22;
+        stroke: #30363d;
+        stroke-width: 1.5;
+      }
+      .panel {
+        fill: #0d1117;
+        stroke: #30363d;
+        stroke-width: 1.2;
       }
       .label {
         font-size: 18px;
         font-weight: bold;
-        fill: #2f2f2f;
+        fill: #c9d1d9;
       }
       .value {
         font-size: 18px;
         font-weight: bold;
-        fill: #1f1f1f;
+        fill: #c9d1d9;
       }
       .track {
-        fill: #2f3440;
+        fill: #21262d;
+        stroke: #30363d;
+        stroke-width: 1;
       }
       .bar {
-        fill: #6f5db7;
+        fill: #a78bfa;
       }
     </style>
   </defs>
 
-  <rect x="0" y="0" width="724" height="156" fill="#e8e8d0" stroke="#2b2b2b" stroke-width="2"/>
+  <!-- outer frame -->
+  <rect x="1" y="1" width="722" height="194" rx="10" class="frame"/>
 
-  <!-- Row 1 -->
-  <text x="22" y="28" class="pixel label">ATTACK</text>
-  <text x="242" y="28" text-anchor="end" class="pixel value">10(-989)</text>
-  <rect x="22" y="34" width="220" height="8" class="track"/>
-  <rect x="22" y="34" width="2" height="8" class="bar"/>
+  <!-- inner panels -->
+  <rect x="16" y="18" width="330" height="160" rx="8" class="panel"/>
+  <rect x="378" y="18" width="330" height="160" rx="8" class="panel"/>
 
-  <text x="362" y="28" class="pixel label">INSANITY</text>
-  <text x="632" y="28" text-anchor="end" class="pixel value">999</text>
-  <rect x="362" y="34" width="270" height="8" class="track"/>
-  <rect x="362" y="34" width="270" height="8" class="bar"/>
+  <!-- left panel -->
+  <text x="42" y="46" class="pixel label">ATTACK</text>
+  <text x="312" y="46" text-anchor="end" class="pixel value">10(-989)</text>
+  <rect x="42" y="58" width="186" height="10" class="track"/>
+  <rect x="42" y="58" width="2" height="10" class="bar"/>
 
-  <!-- Row 2 -->
-  <text x="22" y="72" class="pixel label">MENTAL</text>
-  <text x="242" y="72" text-anchor="end" class="pixel value">182(-817)</text>
-  <rect x="22" y="78" width="220" height="8" class="track"/>
-  <rect x="22" y="78" width="40" height="8" class="bar"/>
+  <text x="42" y="96" class="pixel label">MENTAL</text>
+  <text x="312" y="96" text-anchor="end" class="pixel value">182(-817)</text>
+  <rect x="42" y="108" width="186" height="10" class="track"/>
+  <rect x="42" y="108" width="40" height="10" class="bar"/>
 
-  <text x="362" y="72" class="pixel label">LUCK</text>
-  <text x="632" y="72" text-anchor="end" class="pixel value">73(-926)</text>
-  <rect x="362" y="78" width="270" height="8" class="track"/>
-  <rect x="362" y="78" width="20" height="8" class="bar"/>
+  <text x="42" y="146" class="pixel label">EXP. POINTS</text>
+  <text x="312" y="146" text-anchor="end" class="pixel value">9732</text>
+  <rect x="42" y="158" width="186" height="10" class="track"/>
+  <rect x="42" y="158" width="2" height="10" class="bar"/>
 
-  <!-- Row 3 -->
-  <text x="22" y="116" class="pixel label">EXP. POINTS</text>
-  <text x="242" y="116" text-anchor="end" class="pixel value">9732</text>
-  <rect x="22" y="122" width="220" height="8" class="track"/>
-  <rect x="22" y="122" width="2" height="8" class="bar"/>
+  <!-- right panel -->
+  <text x="404" y="46" class="pixel label">INSANITY</text>
+  <text x="674" y="46" text-anchor="end" class="pixel value">999</text>
+  <rect x="404" y="58" width="224" height="10" class="track"/>
+  <rect x="404" y="58" width="224" height="10" class="bar"/>
 
-  <text x="362" y="116" class="pixel label">NEXT LV.</text>
-  <text x="632" y="116" text-anchor="end" class="pixel value">990267</text>
-  <rect x="362" y="122" width="270" height="8" class="track"/>
-  <rect x="362" y="122" width="267" height="8" class="bar"/>
+  <text x="404" y="96" class="pixel label">LUCK</text>
+  <text x="674" y="96" text-anchor="end" class="pixel value">73(-926)</text>
+  <rect x="404" y="108" width="224" height="10" class="track"/>
+  <rect x="404" y="108" width="20" height="10" class="bar"/>
+
+  <text x="404" y="146" class="pixel label">NEXT LV.</text>
+  <text x="674" y="146" text-anchor="end" class="pixel value">990267</text>
+  <rect x="404" y="158" width="224" height="10" class="track"/>
+  <rect x="404" y="158" width="221" height="10" class="bar"/>
 </svg>
