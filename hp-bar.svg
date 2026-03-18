@@ -10,7 +10,7 @@
     }
   </style>
 
-  <text x="300" y="22" text-anchor="middle" class="name">QI-UMISHO</text>
+  <text x="300" y="22" text-anchor="middle" class="name">QI-UMISHO LV: 99</text>
 
   <rect x="50" y="40" rx="12" ry="12" width="500" height="28"
         fill="#1f2937" stroke="#ff4d5a" stroke-width="2"/>
