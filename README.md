@@ -18,3 +18,11 @@
 <p align="center">
   <img src="./servant-parameters.svg?v=1" alt="Servant Parameters" width="724">
 </p>
+
+## WORLDLINE STATUS 
+
+
+
+## LORE
+
+me.,,,, retard..!!!!! also,,,,, extreme god complex!!!!!!!!!!... 
