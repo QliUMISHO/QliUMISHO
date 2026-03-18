@@ -1,4 +1,4 @@
-<svg width="724" height="196" viewBox="0 0 724 196" xmlns="http://www.w3.org/2000/svg">
+<svg width="724" height="224" viewBox="0 0 724 224" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .pixel {
@@ -53,26 +53,26 @@
     </style>
   </defs>
 
-  <rect x="1" y="1" width="722" height="194" rx="10" class="frame"/>
-  <rect x="16" y="16" width="692" height="164" rx="8" class="panel"/>
+  <rect x="1" y="1" width="722" height="222" rx="10" class="frame"/>
+  <rect x="16" y="16" width="692" height="192" rx="8" class="panel"/>
 
   <text x="32" y="34" class="pixel title">LATEST WORLDLINE NEWS</text>
   <rect x="32" y="40" width="660" height="3" rx="1.5" class="accent"/>
 
-  <rect x="24" y="44" width="676" height="38" rx="6" class="row"/>
-  <text x="40" y="59" class="pixel item-title">Waiting for first API sync...</text>
-  <text x="40" y="74" class="pixel item-meta">FIELD -  |  IMPACT -  |  DIV -</text>
-  <text x="682" y="59" text-anchor="end" class="pixel index">01</text>
+  <rect x="24" y="48" width="676" height="40" rx="6" class="row"/>
+  <text x="40" y="63" class="pixel item-title">Waiting for first API sync...</text>
+  <text x="40" y="79" class="pixel item-meta">FIELD -  |  IMPACT -  |  DIV -</text>
+  <text x="682" y="64" text-anchor="end" class="pixel index">01</text>
 
-  <rect x="24" y="92" width="676" height="38" rx="6" class="row"/>
-  <text x="40" y="107" class="pixel item-title">Waiting for first API sync...</text>
-  <text x="40" y="122" class="pixel item-meta">FIELD -  |  IMPACT -  |  DIV -</text>
-  <text x="682" y="107" text-anchor="end" class="pixel index">02</text>
+  <rect x="24" y="102" width="676" height="40" rx="6" class="row"/>
+  <text x="40" y="117" class="pixel item-title">Waiting for first API sync...</text>
+  <text x="40" y="133" class="pixel item-meta">FIELD -  |  IMPACT -  |  DIV -</text>
+  <text x="682" y="118" text-anchor="end" class="pixel index">02</text>
 
-  <rect x="24" y="140" width="676" height="38" rx="6" class="row"/>
-  <text x="40" y="155" class="pixel item-title">Waiting for first API sync...</text>
-  <text x="40" y="170" class="pixel item-meta">FIELD -  |  IMPACT -  |  DIV -</text>
-  <text x="682" y="155" text-anchor="end" class="pixel index">03</text>
+  <rect x="24" y="156" width="676" height="40" rx="6" class="row"/>
+  <text x="40" y="171" class="pixel item-title">Waiting for first API sync...</text>
+  <text x="40" y="187" class="pixel item-meta">FIELD -  |  IMPACT -  |  DIV -</text>
+  <text x="682" y="172" text-anchor="end" class="pixel index">03</text>
 
-  <text x="32" y="170" class="pixel foot">LAST UPDATE PENDING ACTION RUN</text>
+  <text x="32" y="196" class="pixel foot">LAST UPDATE PENDING ACTION RUN</text>
 </svg>
