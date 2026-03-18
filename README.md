@@ -8,5 +8,5 @@
 ## About ME
 
 <p align="center">
-  <img src="./hp-bar.svg?v=6" alt="HP Bar" />
+  <img src="./hp-bar.svg?v=7" alt="HP Bar" />
 </p>
