@@ -10,3 +10,7 @@
 <p align="center">
   <img src="./hp-bar.svg?v=12" alt="HP Bar"/>
 </p>
+
+<p align="center">
+  <img src="./character-card.svg?v=9" alt="Pokemon Skills" />
+</p>
