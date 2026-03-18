@@ -1,4 +1,4 @@
-<svg width="600" height="90" xmlns="http://www.w3.org/2000/svg">
+<svg width="600" height="110" xmlns="http://www.w3.org/2000/svg">
   <style>
     .name {
       font: 24px Verdana, sans-serif;
@@ -8,6 +8,10 @@
       font: bold 18px Verdana, sans-serif;
       fill: #58a6ff;
     }
+    .job {
+      font: bold 15px Verdana, sans-serif;
+      fill: #58a6ff;
+    }
     .hp-text {
       font: bold 15px Verdana, sans-serif;
       fill: white;
@@ -15,13 +19,15 @@
   </style>
 
   <text x="300" y="22" text-anchor="middle" class="name">Qli-UMISHO</text>
-  <text x="50" y="22" text-anchor="start" class="level">LV: 99</text>
+  <text x="60" y="22" text-anchor="start" class="level">LV: 99</text>
 
   <rect x="50" y="40" rx="12" ry="12" width="500" height="28"
         fill="#1f2937" stroke="#ff4d5a" stroke-width="2"/>
 
-  <rect x="50" y="40" rx="12" ry="12" width="130" height="28"
+  <rect x="50" y="40" rx="12" ry="12" width="125" height="28"
         fill="#dc2626"/>
 
   <text x="300" y="59" text-anchor="middle" class="hp-text">HP 25 / 100</text>
+
+  <text x="60" y="92" text-anchor="start" class="job">Class: Madman</text>
 </svg>
