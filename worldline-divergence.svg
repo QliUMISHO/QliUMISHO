@@ -55,10 +55,10 @@
   <rect x="32" y="48" width="660" height="3" rx="1.5" class="accent"/>
 
   <text x="32" y="76" class="pixel muted">CURRENT VALUE</text>
-  <text x="32" y="118" class="pixel value">1.765327</text>
+  <text x="32" y="118" class="pixel value">1.772048</text>
 
   <rect x="534" y="70" width="158" height="28" rx="6" class="chip"/>
   <text x="613" y="88" text-anchor="middle" class="pixel chip-text">STEINS;GATE</text>
 
-  <text x="32" y="132" class="pixel muted">LAST UPDATE 2026-03-19 22:52 UTC</text>
+  <text x="32" y="132" class="pixel muted">LAST UPDATE 2026-03-19 23:18 UTC</text>
 </svg>
