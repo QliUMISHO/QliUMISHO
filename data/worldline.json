@@ -1,0 +1,29 @@
+{
+  "status": "stale",
+  "stale": true,
+  "api_base": "https://divergence.nyarchlinux.moe/api",
+  "fetched_at": "2026-03-19T05:39:01.796Z",
+  "divergence": null,
+  "total_articles_considered": 0,
+  "top_news": [
+    {
+      "title": "No live API data yet",
+      "description": "Run this workflow in your repository to populate the card with real worldline data.",
+      "field": "BOOT",
+      "impact": 0
+    },
+    {
+      "title": "Divergence meter API unreachable from the local generator",
+      "description": "The GitHub Action is ready and will render the real feed when it runs on GitHub.",
+      "field": "NET",
+      "impact": 0
+    },
+    {
+      "title": "This placeholder SVG will be replaced automatically",
+      "description": "The first successful scheduled or manual run writes the live top-impact news list.",
+      "field": "SYNC",
+      "impact": 0
+    }
+  ],
+  "last_error": "fetch failed"
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="980" height="380" viewBox="0 0 980 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Worldline status card</title>
+  <desc id="desc">Dynamic GitHub profile card showing the latest divergence value and the top three highest-impact news items from the Divergence Meter API.</desc>
+  <defs>
+    <linearGradient id="bg" x1="40" y1="20" x2="940" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="40" y1="20" x2="320" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9e6eff"/>
+      <stop offset="1" stop-color="#58a6ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="10" y="10" width="960" height="360" rx="28" fill="url(#bg)" stroke="#ffffff" stroke-opacity="0.08"/>
+  <circle cx="180" cy="120" r="110" fill="url(#accent)" fill-opacity="0.10" filter="url(#glow)"/>
+  <circle cx="910" cy="58" r="40" fill="#58a6ff" fill-opacity="0.06"/>
+  <circle cx="845" cy="320" r="68" fill="#9e6eff" fill-opacity="0.05"/>
+
+  <text x="40" y="54" fill="#f0f6fc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="26" font-weight="700">Worldline Status</text>
+  <text x="40" y="78" fill="#8b949e" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13">Divergence Meter API • Top 3 news by impact</text>
+
+  <rect x="40" y="98" width="132" height="28" rx="14" fill="#f2cc60" fill-opacity="0.14" stroke="#f2cc60" stroke-opacity="0.45"/>
+  <text x="106" y="116" fill="#f2cc60" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">STALE CACHE</text>
+
+  <text x="40" y="164" fill="#8b949e" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="12" letter-spacing="1.8">CURRENT DIVERGENCE</text>
+  <text x="40" y="234" fill="#e6edf3" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="52" font-weight="700">—.—————</text>
+  <text x="40" y="266" fill="#8b949e" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13">Updated: 2026-03-19 05:39:01 UTC</text>
+  <text x="40" y="292" fill="#8b949e" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13">Source base: https://divergence.nyarchlinux.moe/api</text>
+  <text x="40" y="318" fill="#8b949e" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13">Articles scanned this run: 0</text>
+
+  <line x1="336" y1="44" x2="336" y2="336" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="356" y="54" fill="#f0f6fc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="20" font-weight="700">Top Impact News</text>
+  <text x="356" y="78" fill="#8b949e" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13">Highest absolute impact from <tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">/api/news</tspan></text>
+
+  
+    <rect x="356" y="142" width="584" height="54" rx="16" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.07"/>
+    <rect x="376" y="156" width="56" height="24" rx="12" fill="#f2cc60" fill-opacity="0.16" stroke="#f2cc60" stroke-opacity="0.55"/>
+    <text x="404" y="172" fill="#f2cc60" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="700">BOOT</text>
+    <text x="450" y="172" fill="#f0f6fc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" font-weight="700">Impact 0.000</text>
+    <text x="386" y="194" fill="#8b949e" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11">Run this workflow in your repository to populate the card with real world…</text>
+    <text x="386" y="168" fill="#e6edf3" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" font-weight="600"><tspan x="386" dy="0">No live API data yet</tspan></text>
+  
+
+    <rect x="356" y="206" width="584" height="54" rx="16" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.07"/>
+    <rect x="376" y="220" width="56" height="24" rx="12" fill="#ff7b72" fill-opacity="0.16" stroke="#ff7b72" stroke-opacity="0.55"/>
+    <text x="404" y="236" fill="#ff7b72" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="700">NET</text>
+    <text x="450" y="236" fill="#f0f6fc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" font-weight="700">Impact 0.000</text>
+    <text x="386" y="258" fill="#8b949e" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11">The GitHub Action is ready and will render the real feed when it runs on…</text>
+    <text x="386" y="232" fill="#e6edf3" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" font-weight="600"><tspan x="386" dy="0">Divergence meter API unreachable from the local</tspan><tspan x="386" dy="18">generator</tspan></text>
+  
+
+    <rect x="356" y="270" width="584" height="54" rx="16" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.07"/>
+    <rect x="376" y="284" width="56" height="24" rx="12" fill="#79c0ff" fill-opacity="0.16" stroke="#79c0ff" stroke-opacity="0.55"/>
+    <text x="404" y="300" fill="#79c0ff" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="700">SYNC</text>
+    <text x="450" y="300" fill="#f0f6fc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" font-weight="700">Impact 0.000</text>
+    <text x="386" y="322" fill="#8b949e" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11">The first successful scheduled or manual run writes the live top-impact n…</text>
+    <text x="386" y="296" fill="#e6edf3" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" font-weight="600"><tspan x="386" dy="0">This placeholder SVG will be replaced</tspan><tspan x="386" dy="18">automatically</tspan></text>
+  
+
+  <rect x="40" y="338" width="900" height="1" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="40" y="356" fill="#6e7681" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="11">Generated for GitHub README • Commit this SVG and embed it directly in your profile repository README.</text>
+</svg>
