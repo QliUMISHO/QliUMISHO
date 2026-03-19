@@ -58,21 +58,18 @@
 
   <text x="32" y="34" class="pixel title">LATEST WORLDLINE NEWS</text>
   <rect x="32" y="40" width="660" height="3" rx="1.5" class="accent"/>
-
   <rect x="24" y="48" width="676" height="40" rx="6" class="row"/>
-  <text x="40" y="63" class="pixel item-title">Waiting for first API sync...</text>
-  <text x="40" y="79" class="pixel item-meta">FIELD -  |  IMPACT -  |  DIV -</text>
+  <text x="40" y="63" class="pixel item-title">Odd Lots: War in Iran Squeezes America’s Farmers Agai…</text>
+  <text x="40" y="79" class="pixel item-meta">FIELD Unknown  |  IMPACT -  |  DIV -</text>
   <text x="682" y="64" text-anchor="end" class="pixel index">01</text>
-
   <rect x="24" y="102" width="676" height="40" rx="6" class="row"/>
-  <text x="40" y="117" class="pixel item-title">Waiting for first API sync...</text>
-  <text x="40" y="133" class="pixel item-meta">FIELD -  |  IMPACT -  |  DIV -</text>
+  <text x="40" y="117" class="pixel item-title">How War in Iran Will Squeeze America&#x27;s Farmers Even F…</text>
+  <text x="40" y="133" class="pixel item-meta">FIELD Unknown  |  IMPACT -  |  DIV -</text>
   <text x="682" y="118" text-anchor="end" class="pixel index">02</text>
-
   <rect x="24" y="156" width="676" height="40" rx="6" class="row"/>
-  <text x="40" y="171" class="pixel item-title">Waiting for first API sync...</text>
-  <text x="40" y="187" class="pixel item-meta">FIELD -  |  IMPACT -  |  DIV -</text>
+  <text x="40" y="171" class="pixel item-title">The Man Utd prodigy still too young to play senior fo…</text>
+  <text x="40" y="187" class="pixel item-meta">FIELD Unknown  |  IMPACT -  |  DIV -</text>
   <text x="682" y="172" text-anchor="end" class="pixel index">03</text>
 
-  <text x="32" y="196" class="pixel foot">LAST UPDATE PENDING ACTION RUN</text>
+  <text x="32" y="196" class="pixel foot">LAST UPDATE 2026-03-19 08:00 UTC</text>
 </svg>
