@@ -20,6 +20,7 @@
 </p>
 
 ## WORLDLINE STATUS 
+*Special thanks to https://github.com/FrancescoCaracciolo and the contributors of DivergenceMeter project that made this Wordline Divergence autogenerator workflow possible.* 
 
 <p align="center">
   <img src="./worldline-divergence.svg?v=3" alt="Worldline Divergence" width="724"><br>
