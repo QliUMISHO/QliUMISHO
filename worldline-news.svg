@@ -1,4 +1,4 @@
-<svg width="724" height="224" viewBox="0 0 724 224" xmlns="http://www.w3.org/2000/svg">
+<svg width="724" height="234" viewBox="0 0 724 234" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .pixel {
@@ -53,23 +53,23 @@
     </style>
   </defs>
 
-  <rect x="1" y="1" width="722" height="222" rx="10" class="frame"/>
-  <rect x="16" y="16" width="692" height="192" rx="8" class="panel"/>
+  <rect x="1" y="1" width="722" height="232" rx="10" class="frame"/>
+  <rect x="16" y="16" width="692" height="186" rx="8" class="panel"/>
 
-  <text x="32" y="34" class="pixel title">LATEST WORLDLINE NEWS</text>
-  <rect x="32" y="40" width="660" height="3" rx="1.5" class="accent"/>
-  <rect x="24" y="48" width="676" height="40" rx="6" class="row"/>
-  <text x="40" y="63" class="pixel item-title">HHS staffer changed agency’s voicemail to Domino’s Pi…</text>
-  <text x="40" y="79" class="pixel item-meta">FIELD EPSILON  |  IMPACT 0.000  |  DIV 1.772702</text>
-  <text x="682" y="64" text-anchor="end" class="pixel index">01</text>
-  <rect x="24" y="102" width="676" height="40" rx="6" class="row"/>
-  <text x="40" y="117" class="pixel item-title">Fired FBI agents who worked on Trump 2020 election in…</text>
-  <text x="40" y="133" class="pixel item-meta">FIELD BETA  |  IMPACT 0.050  |  DIV 1.772978</text>
-  <text x="682" y="118" text-anchor="end" class="pixel index">02</text>
-  <rect x="24" y="156" width="676" height="40" rx="6" class="row"/>
-  <text x="40" y="171" class="pixel item-title">Traders Overwhelmed by Iran News Are Turning to AI fo…</text>
-  <text x="40" y="187" class="pixel item-meta">FIELD BETA  |  IMPACT 0.280  |  DIV 1.772300</text>
-  <text x="682" y="172" text-anchor="end" class="pixel index">03</text>
+  <text x="32" y="36" class="pixel title">LATEST WORLDLINE NEWS</text>
+  <rect x="32" y="46" width="660" height="3" rx="1.5" class="accent"/>
+  <rect x="24" y="60" width="676" height="34" rx="6" class="row"/>
+  <text x="40" y="74" class="pixel item-title">Art trendspotting at Art Fair Tokyo 2026: Craft appre…</text>
+  <text x="40" y="88" class="pixel item-meta">FIELD Unknown | IMPACT 0.001 | DIV 1.773194</text>
+  <text x="682" y="76" text-anchor="end" class="pixel index">01</text>
+  <rect x="24" y="104" width="676" height="34" rx="6" class="row"/>
+  <text x="40" y="118" class="pixel item-title">Denmark secretly prepared to blow up Greenland&#x27;s runw…</text>
+  <text x="40" y="132" class="pixel item-meta">FIELD BETA | IMPACT 0.068 | DIV 1.773071</text>
+  <text x="682" y="120" text-anchor="end" class="pixel index">02</text>
+  <rect x="24" y="148" width="676" height="34" rx="6" class="row"/>
+  <text x="40" y="162" class="pixel item-title">Famous night for Forest in season to largely forget</text>
+  <text x="40" y="176" class="pixel item-meta">FIELD DELTA | IMPACT 0.001 | DIV 1.773138</text>
+  <text x="682" y="164" text-anchor="end" class="pixel index">03</text>
 
-  <text x="32" y="196" class="pixel foot">LAST UPDATE 2026-03-19 23:43 UTC</text>
+  <text x="32" y="220" class="pixel foot">LAST UPDATE 2026-03-20 00:01 UTC</text>
 </svg>
