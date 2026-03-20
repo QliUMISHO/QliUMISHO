@@ -27,6 +27,6 @@
   <img src="./worldline-news.svg?v=3" alt="Worldline News" width="724">
 </p>
 
-## LORE
-
-me.,,,, retard..!!!!! also,,,,, extreme god complex!!!!!!!!!!... 
+## CHARACTER PROFILE 
+  
+A Bachelor of Science in Information Technology graduate in an unnamed college school located in the pitiful country of Philippines. Knows a lot of hardware troubleshooting techniques and programming language, though lazy to code them by hand. This NPC also runs on a lot on insanity everyday. Also runs on massive ego and unworldly amounts of God Complex.  
