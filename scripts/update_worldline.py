@@ -61,8 +61,8 @@ def fmt_impact(value: object) -> str:
         return "-"
 
 
-def render_divergence_svg(divergence_value: str, updated_at: str) -> str:
-    return f"""<svg width="724" height="156" viewBox="0 0 724 156" xmlns="http://www.w3.org/2000/svg">
+def render_divergence_svg(divergence_value: str) -> str:
+    return f"""<svg width="724" height="140" viewBox="0 0 724 140" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .pixel {{
@@ -99,39 +99,24 @@ def render_divergence_svg(divergence_value: str, updated_at: str) -> str:
       .accent {{
         fill: #58a6ff;
       }}
-      .chip {{
-        fill: #161b22;
-        stroke: #30363d;
-        stroke-width: 1;
-      }}
-      .chip-text {{
-        font-size: 12px;
-        font-weight: bold;
-        fill: #c9d1d9;
-      }}
     </style>
   </defs>
 
-  <rect x="1" y="1" width="722" height="154" rx="10" class="frame"/>
-  <rect x="16" y="16" width="692" height="124" rx="8" class="panel"/>
+  <rect x="1" y="1" width="722" height="138" rx="10" class="frame"/>
+  <rect x="16" y="16" width="692" height="108" rx="8" class="panel"/>
 
   <text x="32" y="40" class="pixel title">WORLDLINE DIVERGENCE</text>
   <rect x="32" y="48" width="660" height="3" rx="1.5" class="accent"/>
 
   <text x="32" y="76" class="pixel muted">CURRENT VALUE</text>
-  <text x="32" y="118" class="pixel value">{esc(divergence_value)}</text>
-
-  <rect x="534" y="70" width="158" height="28" rx="6" class="chip"/>
-  <text x="613" y="88" text-anchor="middle" class="pixel chip-text">STEINS;GATE</text>
-
-  <text x="32" y="132" class="pixel muted">LAST UPDATE {esc(updated_at)}</text>
+  <text x="32" y="108" class="pixel value">{esc(divergence_value)}</text>
 </svg>
 """
 
 
 def render_news_svg(articles: list[dict], updated_at: str) -> str:
     rows = []
-    row_y = [48, 102, 156]
+    row_y = [60, 104, 148]
 
     padded = articles[:NEWS_COUNT]
     while len(padded) < NEWS_COUNT:
@@ -153,13 +138,13 @@ def render_news_svg(articles: list[dict], updated_at: str) -> str:
 
         rows.append(
             f"""
-  <rect x="24" y="{y}" width="676" height="40" rx="6" class="row"/>
-  <text x="40" y="{y + 15}" class="pixel item-title">{esc(title)}</text>
-  <text x="40" y="{y + 31}" class="pixel item-meta">FIELD {esc(field)}  |  IMPACT {esc(impact)}  |  DIV {esc(divergence)}</text>
+  <rect x="24" y="{y}" width="676" height="34" rx="6" class="row"/>
+  <text x="40" y="{y + 14}" class="pixel item-title">{esc(title)}</text>
+  <text x="40" y="{y + 28}" class="pixel item-meta">FIELD {esc(field)} | IMPACT {esc(impact)} | DIV {esc(divergence)}</text>
   <text x="682" y="{y + 16}" text-anchor="end" class="pixel index">{idx:02d}</text>"""
         )
 
-    return f"""<svg width="724" height="224" viewBox="0 0 724 224" xmlns="http://www.w3.org/2000/svg">
+    return f"""<svg width="724" height="234" viewBox="0 0 724 234" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .pixel {{
@@ -214,13 +199,13 @@ def render_news_svg(articles: list[dict], updated_at: str) -> str:
     </style>
   </defs>
 
-  <rect x="1" y="1" width="722" height="222" rx="10" class="frame"/>
-  <rect x="16" y="16" width="692" height="192" rx="8" class="panel"/>
+  <rect x="1" y="1" width="722" height="232" rx="10" class="frame"/>
+  <rect x="16" y="16" width="692" height="186" rx="8" class="panel"/>
 
-  <text x="32" y="34" class="pixel title">LATEST WORLDLINE NEWS</text>
-  <rect x="32" y="40" width="660" height="3" rx="1.5" class="accent"/>{''.join(rows)}
+  <text x="32" y="36" class="pixel title">LATEST WORLDLINE NEWS</text>
+  <rect x="32" y="46" width="660" height="3" rx="1.5" class="accent"/>{''.join(rows)}
 
-  <text x="32" y="196" class="pixel foot">LAST UPDATE {esc(updated_at)}</text>
+  <text x="32" y="220" class="pixel foot">LAST UPDATE {esc(updated_at)}</text>
 </svg>
 """
 
@@ -235,7 +220,7 @@ def main() -> None:
     articles = news_payload.get("articles", [])
 
     DIVERGENCE_SVG.write_text(
-        render_divergence_svg(divergence_value, now_utc),
+        render_divergence_svg(divergence_value),
         encoding="utf-8",
     )
     NEWS_SVG.write_text(
