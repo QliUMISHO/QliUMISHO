@@ -59,17 +59,17 @@
   <text x="32" y="36" class="pixel title">LATEST WORLDLINE NEWS</text>
   <rect x="32" y="46" width="660" height="3" rx="1.5" class="accent"/>
   <rect x="24" y="60" width="676" height="34" rx="6" class="row"/>
-  <text x="40" y="74" class="pixel item-title">South Korean court hikes ex-president&#x27;s sentence for …</text>
-  <text x="40" y="88" class="pixel item-meta">FIELD Unknown | IMPACT 0.260 | DIV 1.848584</text>
+  <text x="40" y="74" class="pixel item-title">Trump warns Iran blockade could last months, sending …</text>
+  <text x="40" y="88" class="pixel item-meta">FIELD BETA | IMPACT 0.240 | DIV 1.863845</text>
   <text x="682" y="76" text-anchor="end" class="pixel index">01</text>
   <rect x="24" y="104" width="676" height="34" rx="6" class="row"/>
-  <text x="40" y="118" class="pixel item-title">Bloomberg Surveillance: The Fed Decides 4/29/2026</text>
-  <text x="40" y="132" class="pixel item-meta">FIELD BETA | IMPACT 0.234 | DIV 1.847593</text>
+  <text x="40" y="118" class="pixel item-title">New Zealand Firms Turn Pessimistic as Costs Rise, Dem…</text>
+  <text x="40" y="132" class="pixel item-meta">FIELD ALPHA | IMPACT 0.047 | DIV 1.865864</text>
   <text x="682" y="120" text-anchor="end" class="pixel index">02</text>
   <rect x="24" y="148" width="676" height="34" rx="6" class="row"/>
-  <text x="40" y="162" class="pixel item-title">AI-Led Rally in Asia Stocks Masks Deeper Damage from …</text>
-  <text x="40" y="176" class="pixel item-meta">FIELD Unknown | IMPACT 0.270 | DIV 1.846673</text>
+  <text x="40" y="162" class="pixel item-title">Joy as record-breaking runner Sawe returns home</text>
+  <text x="40" y="176" class="pixel item-meta">FIELD Unknown | IMPACT 0.001 | DIV 1.864865</text>
   <text x="682" y="164" text-anchor="end" class="pixel index">03</text>
 
-  <text x="32" y="220" class="pixel foot">LAST UPDATE 2026-04-29 23:51 UTC</text>
+  <text x="32" y="220" class="pixel foot">LAST UPDATE 2026-04-30 02:34 UTC</text>
 </svg>
