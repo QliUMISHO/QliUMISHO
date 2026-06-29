@@ -59,17 +59,17 @@
   <text x="32" y="36" class="pixel title">LATEST WORLDLINE NEWS</text>
   <rect x="32" y="46" width="660" height="3" rx="1.5" class="accent"/>
   <rect x="24" y="60" width="676" height="34" rx="6" class="row"/>
-  <text x="40" y="74" class="pixel item-title">Japan Stocks Set to Climb as Yen Hits 40-Year Low: Ma…</text>
-  <text x="40" y="88" class="pixel item-meta">FIELD Unknown | IMPACT 0.038 | DIV 1.709753</text>
+  <text x="40" y="74" class="pixel item-title">US offers $10 million for info on group behind Signal…</text>
+  <text x="40" y="88" class="pixel item-meta">FIELD BETA | IMPACT 0.145 | DIV 1.724478</text>
   <text x="682" y="76" text-anchor="end" class="pixel index">01</text>
   <rect x="24" y="104" width="676" height="34" rx="6" class="row"/>
-  <text x="40" y="118" class="pixel item-title">Forgent, Backer Offer Stock After Price Doubles Since…</text>
-  <text x="40" y="132" class="pixel item-meta">FIELD GAMMA | IMPACT 0.004 | DIV 1.709242</text>
+  <text x="40" y="118" class="pixel item-title">&#x27;Terrible decision&#x27; - Germany have goal controversial…</text>
+  <text x="40" y="132" class="pixel item-meta">FIELD EPSILON | IMPACT 0.000 | DIV 1.725159</text>
   <text x="682" y="120" text-anchor="end" class="pixel index">02</text>
   <rect x="24" y="148" width="676" height="34" rx="6" class="row"/>
-  <text x="40" y="162" class="pixel item-title">&#x27;They needed that&#x27; - Havertz levels for Germany with …</text>
-  <text x="40" y="176" class="pixel item-meta">FIELD EPSILON | IMPACT 0.000 | DIV 1.710254</text>
+  <text x="40" y="162" class="pixel item-title">China Misses Out on AI Boom as Stocks Trail by Most S…</text>
+  <text x="40" y="176" class="pixel item-meta">FIELD ALPHA | IMPACT 0.149 | DIV 1.722348</text>
   <text x="682" y="164" text-anchor="end" class="pixel index">03</text>
 
-  <text x="32" y="220" class="pixel foot">LAST UPDATE 2026-06-29 22:35 UTC</text>
+  <text x="32" y="220" class="pixel foot">LAST UPDATE 2026-06-29 23:59 UTC</text>
 </svg>
